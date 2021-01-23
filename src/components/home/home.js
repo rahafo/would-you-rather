@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import "./home.scss"
 import {connect} from "react-redux";
-import {Nav} from "../../components/nav/nav";
+import {Nav} from "../nav/nav";
 import {QuestionOverview} from "./questionOverview/questionOverview";
 
 
@@ -38,7 +38,7 @@ class Home extends Component {
                     </div>
                     <div className="tab-content">
                         {this.state.selectedTab === "unanswered" ? unansweredQuestions.map((question) => {
-                                let questionAuthor = this.props.users[question.author]
+                                let questionAuthor = this.props.users[question.author];
 
                                 return (
                                     <QuestionOverview
@@ -50,7 +50,7 @@ class Home extends Component {
 
                             }) :
                             answeredQuestions.map((question) => {
-                                let questionAuthor = this.props.users[question.author]
+                                let questionAuthor = this.props.users[question.author];
 
                                 return (
                                     <QuestionOverview

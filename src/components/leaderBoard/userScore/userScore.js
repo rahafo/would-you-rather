@@ -5,7 +5,7 @@ import {Avatar} from "../../avatar/avatar";
 export const UserScore = (props) => {
     const numOfQuestions = props.user.questions.length;
     const numOfAnswers = Object.keys(props.user.answers).length;
-    const score = numOfQuestions + numOfAnswers
+    const score = numOfQuestions + numOfAnswers;
     return (
         <div className="user">
             <div className="user-content d-flex">

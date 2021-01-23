@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Nav} from "../../components/nav/nav";
+import {Nav} from "../nav/nav";
 import {handleAnswerQuestion} from "../../actions/questions";
 import {connect} from "react-redux";
 import {AnswerQuestion} from "./answerQuestion/answerQuestion";
@@ -25,7 +25,7 @@ class Question extends Component {
 
     setQuestionInfo = () => {
         let id = this.props.match.params.id;
-        let question = this.props.questions[id]
+        let question = this.props.questions[id];
         this.setState({
             question: question,
             questionAuthor: this.props.users[question.author],
@@ -33,7 +33,7 @@ class Question extends Component {
                 question.optionTwo.votes.includes(this.props.authedUser) ? "optionTwo" : "",
             didAnswer: question.optionOne.votes.includes(this.props.authedUser) || question.optionTwo.votes.includes(this.props.authedUser)
         })
-    }
+    };
 
     onValueChange = (e) => {
         this.setState({selectedValue: e.target.value})

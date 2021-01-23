@@ -2,7 +2,7 @@ import React from 'react'
 import "./voteResult.scss"
 
 export const VoteResult = (props) => {
-    const percentage = (props.numOfVotes / props.totalVotes) * 100
+    const percentage = (props.numOfVotes / props.totalVotes) * 100;
     return (
         <div className={`vote ${props.selected ? "selected" : ""}`}>
             <div className="content d-flex flex-column">

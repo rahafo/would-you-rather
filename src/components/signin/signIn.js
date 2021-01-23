@@ -30,7 +30,7 @@ class SignIn extends Component {
                         <span>Please sign in to continue.</span>
                     </div>
                     <div className="form-body d-flex flex-column">
-                        <img src={wrf} alt={"logo"}></img>
+                        <img src={wrf} alt={"logo"}/>
                         <FormControl variant="outlined">
                             <InputLabel>User</InputLabel>
                             <Select

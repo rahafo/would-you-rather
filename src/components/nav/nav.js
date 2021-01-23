@@ -7,7 +7,7 @@ import {Avatar} from "../avatar/avatar";
 export const Nav = (props) => {
     const authedUser = useSelector(store => store.authedUser);
     const users = useSelector(store => store.users);
-    const authedUserInfo = users[authedUser]
+    const authedUserInfo = users[authedUser];
     return (
         <nav className="Nav">
             <div className="d-flex justify-content-center">
@@ -35,4 +35,4 @@ export const Nav = (props) => {
             </div>
         </nav>
     )
-}
+};

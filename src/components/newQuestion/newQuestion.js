@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import "./newQuestion.scss"
 import {connect} from "react-redux";
 import Button from "@material-ui/core/Button";
-import {Nav} from "../../components/nav/nav";
+import {Nav} from "../nav/nav";
 import TextField from "@material-ui/core/TextField";
 import {handleAddQuestion} from "../../actions/questions";
 
@@ -27,7 +27,7 @@ class NewQuestion extends Component {
         this.setState({
             optionOneText: "",
             optionTwoText: ""
-        })
+        });
         this.props.history.push("../")
     };
 

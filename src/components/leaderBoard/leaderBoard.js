@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import "./leaderBoard.scss"
 import {connect} from "react-redux";
-import {Nav} from "../../components/nav/nav";
+import {Nav} from "../nav/nav";
 import {UserScore} from "./userScore/userScore";
 
 
