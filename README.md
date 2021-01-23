@@ -1,4 +1,4 @@
-# MyReads Project
+# Would you rather.. Project
 
 This is a required project for udacity react nano degree program.
 
