@@ -1,0 +1,38 @@
+.vote {
+  width: 23em;
+  height: 8em;
+  border: 1px solid #8898aa;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  background-color: rgba(144, 144, 144, 0.14);
+
+  &.selected {
+    background: rgba(89, 190, 231, 0.16);
+    color: rgba(89, 190, 231, 0.92);
+  }
+
+  .content {
+    padding: 1em;
+
+    .percentage-container {
+      width: 20em;
+      height: 1.5em;
+      margin-top: 1em;
+      background-color: rgba(202, 202, 202, 0.95);
+      color: white;
+
+      .percentage {
+        height: 1.5em;
+        background-color: rgba(89, 190, 231, 0.92);
+        text-align: center;
+      }
+    }
+
+    .num-of-votes {
+      color: black;
+      text-align: center;
+      font-size: 0.8em;
+      margin-top: 0.4em;
+    }
+  }
+}

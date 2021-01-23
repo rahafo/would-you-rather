@@ -1,0 +1,37 @@
+.answered-question {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .answered-question-content {
+    width: 35em;
+    height: 35em;
+    margin: auto;
+    background-color: rgba(136, 152, 170, 0.03);
+    border: 1px solid #8898aa;
+    border-radius: 10px;
+    font-weight: bold;
+
+    .header {
+      background-color: #cadbf5bd;
+      border-bottom: 1px solid #8898aa;
+      padding: 0.8em;
+      text-align: left;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .user-avatar {
+      border-right: 1px solid #8898aa;
+      display: flex;
+      align-items: center;
+      padding: 1em;
+    }
+
+    .body {
+      margin: 2em;
+      justify-content: center;
+      text-align: left;
+    }
+  }
+}

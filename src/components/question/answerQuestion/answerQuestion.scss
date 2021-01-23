@@ -1,0 +1,47 @@
+.answer-question {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .answer-question-form {
+    width: 30em;
+    height: 20em;
+    margin: auto;
+    background-color: rgba(136, 152, 170, 0.03);
+    border: 1px solid #8898aa;
+    border-radius: 10px;
+    font-weight: bold;
+
+    .form-header {
+      background-color: #cadbf5bd;
+      border-bottom: 1px solid #8898aa;
+      padding: 0.8em;
+      text-align: left;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .user-avatar {
+      border-right: 1px solid #8898aa;
+      display: flex;
+      align-items: center;
+      padding: 1em;
+    }
+
+    .form-body {
+      margin: 2em;
+      justify-content: center;
+      text-align: left;
+
+      button {
+        margin-top: 1em;
+        width: 100%;
+        background-color: rgba(89, 190, 231, 1);
+      }
+
+      .MuiButton-contained.Mui-disabled {
+        background-color: rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+}

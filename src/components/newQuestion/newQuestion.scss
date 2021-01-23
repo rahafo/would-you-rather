@@ -1,0 +1,58 @@
+.new-question {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .new-question-form {
+    width: 32em;
+    height: 32em;
+    margin: auto;
+    background-color: rgba(136, 152, 170, 0.03);
+    border: 1px solid #8898aa;
+    border-radius: 10px;
+    font-weight: bold;
+
+    .form-header {
+      background-color: #cadbf5bd;
+      border-bottom: 1px solid #8898aa;
+      padding: 1em;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .form-body {
+      margin: 2em;
+      justify-content: center;
+      text-align: left;
+
+      .or {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #909090;
+        line-height: 0.1em;
+        margin: 20px 0 20px;
+
+        span {
+          background: #fff;
+          padding: 0 10px;
+        }
+      }
+
+      .MuiFormControl-root {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+
+      button {
+        margin-top: 1em;
+        width: 100%;
+        background-color: rgba(89, 190, 231, 1);
+      }
+
+      .MuiButton-contained.Mui-disabled {
+        background-color: rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+}
