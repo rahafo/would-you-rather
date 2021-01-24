@@ -1,29 +1,27 @@
-import React, {Component} from 'react'
+import React from 'react'
 import "./leaderBoard.scss"
 import {connect} from "react-redux";
 import {Nav} from "../nav/nav";
 import {UserScore} from "./userScore/userScore";
 
 
-class LeaderBoard extends Component {
-    render() {
-        return (
-            <div className="leader-board">
-                <Nav history={this.props.history}/>
-                <div className="users-list">
-                    {this.props.users.sort((a, b) => (b.questions.length + Object.keys(b.answers).length) - (a.questions.length + Object.keys(a.answers).length)).map((user) =>
-                        <UserScore user={user} key={user.id}/>
-                    )}
-                </div>
+const LeaderBoard = ({users}) => {
+    return (
+        <div className="leader-board">
+            <Nav/>
+            <div className="users-list">
+                {users.sort((a, b) => (b.questions.length + Object.keys(b.answers).length) - (a.questions.length + Object.keys(a.answers).length)).map((user) =>
+                    <UserScore user={user} key={user.id}/>
+                )}
             </div>
-        )
-    }
-}
+        </div>
+    )
 
-function mapStateToProps({users, authedUser}) {
+};
+
+function mapStateToProps({users}) {
     return {
         users: Object.keys(users).map((id) => users[id]),
-        authedUser: authedUser
     }
 }
 

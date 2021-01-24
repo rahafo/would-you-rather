@@ -14,11 +14,8 @@ class NewQuestion extends Component {
     };
 
     onValueChange = (e) => {
-        const {name, value} = e.target;
-        const obj = {...this.state};
-        obj[name] = value;
-
-        this.setState(obj)
+        const { name, value } = e.target;
+        this.setState({ [name]: value })
     };
 
 
@@ -38,7 +35,7 @@ class NewQuestion extends Component {
     render() {
         return (
             <div className="new-question">
-                <Nav history={this.props.history}/>
+                <Nav/>
                 <div className="new-question-form d-flex flex-column">
                     <div className="form-header">
                         <h2>Create New Question</h2>

@@ -18,7 +18,7 @@ class SignIn extends Component {
 
     signIn = () => {
         this.props.dispatch(setAuthedUser(this.state.selectedUser));
-        this.props.history.push("../")
+        this.props.history.push(this.props.location.state?.referrer??"../")
     };
 
     render() {

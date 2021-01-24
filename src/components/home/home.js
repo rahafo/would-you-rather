@@ -24,7 +24,7 @@ class Home extends Component {
 
         return (
             <div className="home">
-                <Nav history={this.props.history}/>
+                <Nav/>
                 <div className="questions">
                     <div className="tabs d-flex">
                         <div onClick={() => this.setSelectedTab("unanswered")}

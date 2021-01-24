@@ -17,14 +17,17 @@ const SecureRoute = ({component: Component, auth: auth, ...rest}) => {
         <Route {...rest} render={(props) => (
             auth
                 ? <Component {...props} />
-                : <Redirect to='/login'/>
+                : <Redirect to={{
+                    pathname: "/login",
+                    state: { referrer: rest.location.pathname }
+                }}/>
         )}/>)
 };
 
 class App extends Component {
 
     componentDidMount() {
-        this.props.dispatch(handleInitialData())
+        this.props.handleInitialData();
     }
 
     render() {
@@ -39,6 +42,7 @@ class App extends Component {
                         <SecureRoute exact path="/add" component={NewQuestion} auth={this.props.authedUser}/>
                         <SecureRoute exact path="/leaderboard" component={LeaderBoard} auth={this.props.authedUser}/>
                         <SecureRoute exact path="/signout" component={Signout} auth={this.props.authedUser}/>
+                        <Route  path="/404" component={notFound}/>
                         <Route component={notFound}/>
                     </Switch>
                 </div>
@@ -53,4 +57,4 @@ function mapStateToProps({authedUser}) {
     }
 }
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps, { handleInitialData })(App)
